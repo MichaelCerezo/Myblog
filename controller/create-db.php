@@ -6,7 +6,7 @@
 	require_once(__DIR__ . "/../model/database.php");
 	$connection = new mysqli($host, $username, $password);
 	if ($connection->connect_error) {
-		die("Error: " . $connection->connect_error);
+		die("<p>Error: " . $connection->connect_error . "</p>");
 	}
 //------------------------------------------------------------------------------------------------
 //New Database File in Localhost
@@ -18,11 +18,11 @@
 		$query = $connection->query("CREATE DATABASE $database");
 
 		if ($query) {
-			echo "successfully created database" . $database;
+			echo "<p>successfully created database" . $database . "</p>";
 		}
 	}
 		else{
-			echo "DATABASE already exists";
+			echo "<p>DATABASE already exists</p>";
 		}
 
 		$query = $connection->query("CREATE TABLE posts ("
@@ -31,8 +31,11 @@
 			. "post text NOT NULL,"
 			. "PRIMARY KEY (id))");
 
-		if () {
-			
+		if ($query) {
+			echo "successfully created table: posts";
+		}
+		else{
+			echo "<p>$connection->error</p>";
 		}
 
 	$connection->close();
