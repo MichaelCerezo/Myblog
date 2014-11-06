@@ -2,3 +2,28 @@ body{
 	background-color: teal;
 	
 }
+
+@media screen and (max-width:959px){
+    #container{
+        width: 100%
+    }
+    #left-column{
+        width: 70%
+    }
+    #right-column{
+        width: 30%
+    }
+}
+@media screen and (max-width:640px){
+    #left-column{
+        width: 100%
+    }
+    #right-column{
+        width: 100%
+	}
+}
+@media screen and (max-width:320px){
+    #container{
+        width: 320%
+    }
+}
