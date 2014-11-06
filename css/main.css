@@ -3,7 +3,7 @@ body{
 	
 }
 
-@media screen and (max-width:959px){
+@media screen and (max-width:786px){
     #container{
         width: 100%
     }
@@ -13,17 +13,18 @@ body{
     #right-column{
         width: 30%
     }
+    html {background-color: green;}
 }
-@media screen and (max-width:640px){
-    #left-column{
-        width: 100%
-    }
-    #right-column{
-        width: 100%
-	}
-}
+
+/*
+==============================================================================================================================================
+	Iphone4
+==============================================================================================================================================
+*/
+
 @media screen and (max-width:320px){
     #container{
         width: 320%
     }
+    html {background-color: red;}
 }
