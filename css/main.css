@@ -19,7 +19,9 @@ body{
     #right-column{
         width: 30%
     }
-    html {background-color: green;}
+    body{
+        background-color: red;
+    }
 }
 
 /*
@@ -32,5 +34,7 @@ body{
     #container{
         width: 320%
     }
-    html {background-color: red;}
+    body{
+        background-color: yellow;
+    }
 }

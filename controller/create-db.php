@@ -35,7 +35,7 @@
 			. "PRIMARY KEY (id))");
 
 		if ($query) {
-			echo "successfully created table: posts";
+			echo "<p>successfully created table: posts</p>";
 		}
 		else{
 			echo "<p>$connection->error</p>";
