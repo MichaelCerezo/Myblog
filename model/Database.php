@@ -21,7 +21,11 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
 		public function openConnection() {
-			
+			$this->connectiion = new mysqli($this->host, $this->username, $this->password, $this->database)
+		
+			if ($is->connection->connect_error) {
+				die("<p>Error: " . $this->connection->connect_error . "</p>");
+			}
 		}
 
 		public function closeConnection() {
