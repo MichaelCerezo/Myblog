@@ -18,10 +18,14 @@
 		}
 //--------------------------------------------------------------------------------------------------------------------------------------------
 // Makes the Class Suitable for any Initialization
+// Implements openConnection Function
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
 		public function openConnection() {
 			$this->connectiion = new mysqli($this->host, $this->username, $this->password, $this->database)
+//--------------------------------------------------------------------------------------------------------------------------------------------
+// Implements closeConnection Function
+//--------------------------------------------------------------------------------------------------------------------------------------------
 		
 			if ($is->connection->connect_error) {
 				die("<p>Error: " . $this->connection->connect_error . "</p>");
@@ -29,7 +33,9 @@
 		}
 
 		public function closeConnection() {
-			
+			if(isset($this->connection)) {
+				$this->connection->close();
+			}
 		}
 
 		public function query($string) {
