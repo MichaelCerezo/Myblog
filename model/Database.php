@@ -17,6 +17,7 @@
 			$this->database = $database;
 		}
 //--------------------------------------------------------------------------------------------------------------------------------------------
+// A function is a block of statements that can be used repeatedly in a program
 // Makes the Class Suitable for any Initialization
 // Implements openConnection Function
 //--------------------------------------------------------------------------------------------------------------------------------------------
@@ -31,6 +32,9 @@
 				die("<p>Error: " . $this->connection->connect_error . "</p>");
 			}
 		}
+//--------------------------------------------------------------------------------------------------------------------------------------------
+// Isset Determines if a Variable is Set and is not NULL
+//--------------------------------------------------------------------------------------------------------------------------------------------
 
 		public function closeConnection() {
 			if(isset($this->connection)) {
@@ -39,7 +43,13 @@
 		}
 
 		public function query($string) {
-			
+			$this->openConnection();
+
+			$query = $this->connection->query($string);
+
+			$this->closeConnection();
+
+			return $query;
 		}
 	}
  ?>
