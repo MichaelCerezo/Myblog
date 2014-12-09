@@ -29,7 +29,7 @@
 //New Database File in Localhost
 //--------------------------------------------------------------------------------------------------------------------------------------------
 	
-		$exists = $this->connection ->select_db($database);
+		$exists = $this->connection->select_db($database);
 
 		if(!$exists){
 			$query = $this->connection->query("CREATE DATABASE $database");
